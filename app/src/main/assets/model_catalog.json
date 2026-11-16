@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "baseUrl": "",
+  "baseUrl": "https://github.com/aguswidanarko/voice-translator-offline/releases/download/models-v1",
   "packages": [
     {
       "id": "asr-multilingual",
@@ -8,8 +8,8 @@
       "name": "Pengenalan suara (Indonesia + Mandarin)",
       "description": "sherpa-onnx streaming zipformer multibahasa, encoder int8. Dipakai untuk mengenali ucapan Indonesia dan Mandarin.",
       "archive": "asr-multilingual.zip",
-      "sizeBytes": 340000000,
-      "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "sizeBytes": 340189211,
+      "sha256": "a35c750e28aa3802b80f29984b59356d64cbcba98ba42414b4c18cca8106d83f",
       "installPath": "asr",
       "required": true
     },
@@ -19,8 +19,8 @@
       "name": "Suara Indonesia (Piper)",
       "description": "VITS Piper id_ID news int8 untuk membacakan hasil terjemahan Bahasa Indonesia.",
       "archive": "tts-id.zip",
-      "sizeBytes": 22000000,
-      "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "sizeBytes": 36346019,
+      "sha256": "284a10d12189433b64a76c1319f91ca4d723d51949accb56b28332114e7a53bf",
       "installPath": "tts-id",
       "required": true
     },
@@ -31,7 +31,7 @@
       "description": "VITS Piper zh_CN xiao_ya int8 untuk membacakan hasil terjemahan Mandarin.",
       "archive": "tts-zh.zip",
       "sizeBytes": 20934268,
-      "sha256": "6418fe10dd286970cc192e6e2d00377633b981762e478edc1dd9433c34114604",
+      "sha256": "21e7cf54b7481d4524882c559a6b88691f3203ba7997dd681ec6b4a5e91326d8",
       "installPath": "tts-zh",
       "required": true
     },
@@ -41,8 +41,8 @@
       "name": "Terjemahan Indonesia → Inggris",
       "description": "OPUS-MT Marian int8. Tahap pertama rute Indonesia → Mandarin.",
       "archive": "mt-id-en.zip",
-      "sizeBytes": 210000000,
-      "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "sizeBytes": 210309171,
+      "sha256": "1eb5de5494b7b370c536bb26d53423a217a7c7bad651baa28e7d1972fc17e77b",
       "installPath": "mt-id-en",
       "required": true
     },
@@ -52,8 +52,8 @@
       "name": "Terjemahan Inggris → Mandarin",
       "description": "OPUS-MT Marian int8. Tahap kedua rute Indonesia → Mandarin.",
       "archive": "mt-en-zh.zip",
-      "sizeBytes": 210000000,
-      "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "sizeBytes": 236532632,
+      "sha256": "27284b65cc8c2c0637fdbef64fc15a36cfa6746c4ffa1691ca94157f3deaac10",
       "installPath": "mt-en-zh",
       "required": true
     },
@@ -63,8 +63,8 @@
       "name": "Terjemahan Mandarin → Inggris",
       "description": "OPUS-MT Marian int8. Tahap pertama rute Mandarin → Indonesia.",
       "archive": "mt-zh-en.zip",
-      "sizeBytes": 210000000,
-      "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "sizeBytes": 236531768,
+      "sha256": "408ed6edf993a9414acd5420bd93ae5c691e48ac07fb20d72152fcb6d950853d",
       "installPath": "mt-zh-en",
       "required": true
     },
@@ -74,8 +74,8 @@
       "name": "Terjemahan Inggris → Indonesia",
       "description": "OPUS-MT Marian int8. Tahap kedua rute Mandarin → Indonesia.",
       "archive": "mt-en-id.zip",
-      "sizeBytes": 210000000,
-      "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "sizeBytes": 210309861,
+      "sha256": "6104dd2542dfc7cc9bb5d6d050f19927b1cf2f3270da6f06cacc4a2b5c2ef9cf",
       "installPath": "mt-en-id",
       "required": true
     }
