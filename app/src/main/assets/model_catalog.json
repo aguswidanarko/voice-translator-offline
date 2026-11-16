@@ -30,8 +30,8 @@
       "name": "Suara Mandarin (Piper)",
       "description": "VITS Piper zh_CN xiao_ya int8 untuk membacakan hasil terjemahan Mandarin.",
       "archive": "tts-zh.zip",
-      "sizeBytes": 15000000,
-      "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "sizeBytes": 20934268,
+      "sha256": "6418fe10dd286970cc192e6e2d00377633b981762e478edc1dd9433c34114604",
       "installPath": "tts-zh",
       "required": true
     },
