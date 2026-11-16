@@ -1,0 +1,3 @@
+# Only needed for tools/speech_roundtrip.py (TTS -> ASR validation).
+# 2.x dropped the espeak frontend for Piper VITS; 1.13.8 matches the Android AAR.
+sherpa-onnx==1.13.8

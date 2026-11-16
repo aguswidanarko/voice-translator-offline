@@ -1,0 +1,56 @@
+name: Models
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Release tag that will host the model archives"
+        default: "models-v1"
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    timeout-minutes: 240
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install CPU PyTorch
+        run: pip install torch --index-url https://download.pytorch.org/whl/cpu
+
+      - name: Install export dependencies
+        run: pip install -r tools/requirements.txt
+
+      - name: Export OPUS-MT models to int8 ONNX
+        run: python tools/export_mt.py --out models-out/mt
+
+      - name: Fetch speech models
+        run: bash tools/fetch_speech.sh models-out/speech
+
+      - name: Package archives and refresh catalog
+        run: |
+          python tools/package_models.py \
+            --base-url "https://github.com/${{ github.repository }}/releases/download/${{ inputs.tag }}"
+
+      - name: Publish model release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ inputs.tag }}
+          name: Offline models ${{ inputs.tag }}
+          files: release/*.zip
+          fail_on_unmatched_files: true
+
+      - name: Commit refreshed catalog
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add app/src/main/assets/model_catalog.json
+          git diff --cached --quiet || git commit -m "Update model catalog for ${{ inputs.tag }}"
+          git push

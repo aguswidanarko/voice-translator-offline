@@ -1,0 +1,9 @@
+optimum>=2.1
+optimum-onnx>=0.1
+transformers>=4.57
+torch>=2.15
+onnx>=1.23
+onnxruntime>=1.32
+sentencepiece>=0.2
+sacrebleu>=2.4
+huggingface_hub>=0.36

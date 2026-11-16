@@ -1,0 +1,13 @@
+.gradle/
+build/
+local.properties
+.tools/
+.idea/
+*.iml
+.DS_Store
+app/libs/*.jar
+!app/libs/.gitkeep
+app/src/main/jniLibs/
+tools/mtenv/
+models-out/
+release/
